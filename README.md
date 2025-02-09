@@ -1,7 +1,7 @@
 
 # Recommendation System
 
-![Image_Alt](r.jpeg)
+![Image_Alt](r.png)
 
 ## 📌 Overview  
 This project implements a **Recommendation System** using **machine learning** techniques. It suggests relevant items to users based on past interactions, improving user experience in applications like e-commerce, streaming platforms, and online learning.
