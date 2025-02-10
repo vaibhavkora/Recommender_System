@@ -32,10 +32,10 @@ The dataset consists of:
 - **Content-Based Filtering**: Recommending items based on item attributes.  
 - **Hybrid Model**: Combining both approaches for better accuracy.
 
-## Next Steps & Improvements
-🚀 Hybrid Model: Combine content-based and collaborative filtering for better recommendations.
-🔍 Better Feature Engineering: Include movie descriptions, reviews, or plot summaries.
-⚡ Deployment: Build an interactive web app using Flask or Streamlit.
+## 📌Next Steps & Improvements
+- 🚀 Hybrid Model: Combine content-based and collaborative filtering for better recommendations.
+- 🔍 Better Feature Engineering: Include movie descriptions, reviews, or plot summaries.
+- ⚡ Deployment: Build an interactive web app using Streamlit.
 
 💡 What’s your go-to recommendation technique? I would love to hear your thoughts on improving this further! 🚀
 
