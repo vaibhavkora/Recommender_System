@@ -8,15 +8,6 @@ This project implements a **Recommendation System** using **machine learning** t
 
 
 
-
-## 📂Dataset  
-The dataset consists of:  
-- User interactions (ratings, purchases, or clicks).  
-- Item details (features, categories, or metadata).  
-- User profiles.
-
-
-
 ## 📂Dataset  
 The dataset consists of:  
 - User interactions (ratings, purchases, or clicks).  
