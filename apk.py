@@ -9,7 +9,7 @@ import os
 # Function to download similarity.pkl if it doesn't exist
 def download_similarity():
     if not os.path.exists("similarity.pkl"):
-        url = "https://github.com/DivyaSriThatikonda/TMDB-Movie-Recommendation-System/releases/download/v1.0.0/similarity.pkl"
+        url = "https://github.com/vaibhavkora/Recommender_System/releases/download/v1.0.0/similarity.pkl"
         try:
             response = requests.get(url, timeout=15)
             response.raise_for_status()
