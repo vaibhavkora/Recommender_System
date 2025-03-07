@@ -29,7 +29,7 @@ def fetch_poster(movie_id):
 
     for _ in range(3):  # Retry up to 3 times
         try:
-            response = requests.get(url, timeout=20)
+            response = requests.get(url,timeout=20)
             response.raise_for_status()
             data = response.json()
 
@@ -54,7 +54,7 @@ def recommend(movie):
     recommended_movie_names = []
     recommended_movie_posters = []
 
-    for i in distances[1:10]:  # Get top 9 recommendations
+    for i in distances[1:21]:  # Get top 9 recommendations
         movie_id = movies.at[i[0], 'movie_id']
         movie_name = movies.at[i[0], 'title']
 
