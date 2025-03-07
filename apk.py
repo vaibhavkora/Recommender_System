@@ -5,7 +5,6 @@ import time
 import pandas as pd
 import os
 
-
 # Function to download similarity.pkl if it doesn't exist
 def download_similarity():
     if not os.path.exists("similarity.pkl"):
@@ -20,10 +19,8 @@ def download_similarity():
             st.error(f"❌ Failed to download similarity.pkl: {e}")
             st.stop()
 
-
 # Download similarity.pkl
 download_similarity()
-
 
 # Function to fetch movie poster using TMDb API
 def fetch_poster(movie_id):
@@ -44,7 +41,6 @@ def fetch_poster(movie_id):
             time.sleep(3)
     return "https://via.placeholder.com/500x750?text=Error"
 
-
 # Function to recommend movies
 def recommend(movie):
     try:
@@ -54,7 +50,7 @@ def recommend(movie):
         return [], []
 
     distances = sorted(list(enumerate(similarity[index])), reverse=True, key=lambda x: x[1])
-
+    
     recommended_movie_names = []
     recommended_movie_posters = []
 
@@ -70,7 +66,6 @@ def recommend(movie):
         recommended_movie_names.append(movie_name)
 
     return recommended_movie_names, recommended_movie_posters
-
 
 # Streamlit UI Configuration
 st.set_page_config(page_title="Movie Recommender", layout="wide")
@@ -131,18 +126,17 @@ selected_movie = st.selectbox(
 
 if st.button("🚀 Get Recommendations", use_container_width=True):
     names, posters = recommend(selected_movie)
-
+    
     if names:
         # Create responsive columns
         cols = st.columns(len(names))
-
+        
         for col, name, poster in zip(cols, names, posters):
             with col:
                 st.markdown(f'<div class="movie-card">', unsafe_allow_html=True)
                 st.image(
                     poster,
-                    use_column_width=True,
-                    output_format="auto",
+                    use_container_width=True,  # Corrected parameter
                     caption="",
                     width=300
                 )
